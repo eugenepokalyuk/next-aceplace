@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+* {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+h1, h2, h3 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #333;
+    font-size: 2rem;
+}
+
+.link {
+    color: #3498db;
+    cursor: pointer;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0px 24px;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+.search-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.inn-container {
+    margin: 24px 0px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input[type="text"] {
+    background: #e7e7e7;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    /* border: 2px solid #ccc; */
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    /* font-size: 16px; */
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #3498db;
+}
+
+button {
+    background: #ddd;
+    padding: 10px 15px;
+    /* border: 2px solid #ccc; */
+    border: none;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e7e7e7;
+}
+
+button:focus {
+    outline: none;
+}
+
+.hr {
+    border-top: 1px solid #e7e7e7;
+    margin: 24px 0px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 300px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 16px;
+}
+
+.modal-buttons-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-content button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    min-width: 120px;
+}
+
+.modal-content button:hover {
+    background: #3498db;
+}
+
+.error {
+    color: red;
+    margin-top: 12px;
+    text-align: center;
+}
