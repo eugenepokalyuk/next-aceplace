@@ -3,10 +3,6 @@ import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 import Modal from '../../components/Modal';
 
-interface Address {
-    value: string;
-}
-
 interface Management {
     name: string;
     post: string;
@@ -37,13 +33,6 @@ const Info = ({ organization, error }: Props) => {
     const [showModal, setShowModal] = useState(false);
     const [redirectUrl, setRedirectUrl] = useState('');
 
-    if (error) {
-        return <div>{error}</div>;
-    }
-
-    // const handleAddressClick = () => {
-    //     setShowModal(true);
-    // };
     const handleAddressClick = () => {
         if (organization?.address) {
             setRedirectUrl(`https://yandex.ru/maps/?text=${organization.address}`);
@@ -75,11 +64,15 @@ const Info = ({ organization, error }: Props) => {
                     <p>ОКФС: {organization.okfs || 'Нет данных'}</p>
                     <p>ОКВЭД: {organization.okved || 'Нет данных'}</p>
                     <p>Организационно-правовая форма: {organization.opf || 'Нет данных'}</p>
-
                 </div>
+            ) : error ? (
+                <div>{error}</div>
             ) : (
-                <p>Загрузка...</p>
+                <div>Уууупс... неопознанная ошибка</div>
+            ) && (
+                <div>Загрузка...</div>
             )}
+
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
                     <p>Вы действительно хотите перейти на внешний ресурс?</p>

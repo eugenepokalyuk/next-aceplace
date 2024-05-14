@@ -1,4 +1,3 @@
-// components/Modal.tsx
 import { useEffect } from 'react';
 
 interface Props {
@@ -22,7 +21,6 @@ const Modal = ({ onClose, children }: Props) => {
     return (
         <div className="modal">
             <div className="modal-content">
-                {/* <button onClick={onClose}>Закрыть</button> */}
                 {children}
             </div>
         </div>
