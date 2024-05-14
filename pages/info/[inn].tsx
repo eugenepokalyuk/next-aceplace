@@ -68,7 +68,7 @@ const Info = ({ organization, error }: Props) => {
             ) : error ? (
                 <div>{error}</div>
             ) : (
-                <div>Уууупс... неопознанная ошибка</div>
+                <div>Уууупс... Неопознанная ошибка</div>
             ) && (
                 <div>Загрузка...</div>
             )}
@@ -93,7 +93,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
     try {
         const url = "https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party";
-        const token = "3f0b08861cf2af73fddd364fd8eec5eb22ba2e4d";
+        const token = process.env.NEXT_PUBLIC_DADATE_API_KEY;
         const query = inn;
 
         const options: RequestInit = {
