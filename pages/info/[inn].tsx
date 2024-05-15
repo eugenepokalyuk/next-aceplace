@@ -77,8 +77,8 @@ const Info = ({ organization, error }: Props) => {
                 <Modal onClose={() => setShowModal(false)}>
                     <p>Вы действительно хотите перейти на внешний ресурс?</p>
                     <div className='modal-buttons-content'>
-                        <button onClick={handleRedirect}>Да</button>
-                        <button onClick={() => setShowModal(false)}>Закрыть</button>
+                        <button onClick={() => setShowModal(false)}>Отказаться</button>
+                        <button onClick={handleRedirect}>Перейти</button>
                     </div>
                 </Modal>
             )}
